@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d1076a</color>
+    <color name="colorPrimaryDark">#d1076a</color>
+    <color name="colorAccent">#d1076a</color>
+    <color name="greyback">#cccccc</color>
+    <color name="blue">#ADD8E6</color>
+    <color name="just_pink">#d1076a</color>
+    <color name="light_pink">#de5196</color>
+    <color name="not_serious_pink">#ff69b4</color>
+    <color name="transparent">#80000000</color>
+</resources>

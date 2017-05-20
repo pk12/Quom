@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.teoflev.quom.arcadeActivity"
+    android:background="@color/greyback"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/answer3"
+        android:layout_width="184dp"
+        android:layout_height="99dp"
+        android:text="
+ Αφού δούμε μαζί μια αλβανική τσόντα"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer1"
+        android:background="@drawable/optionbutton"
+        app:layout_constraintRight_toLeftOf="@+id/answer4"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/answer2"
+        android:layout_width="184dp"
+        android:layout_height="99dp"
+        android:text="
+ΠΟΤΕ"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        android:background="@drawable/optionbutton"
+        app:layout_constraintLeft_toRightOf="@+id/answer1"
+        app:layout_constraintBottom_toTopOf="@+id/answer4" />
+
+    <Button
+        android:id="@+id/answer4"
+        android:layout_width="184dp"
+        android:layout_height="99dp"
+        android:text="
+ 2 μήνες"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer2"
+        android:background="@drawable/optionbutton"
+        app:layout_constraintLeft_toRightOf="@+id/answer3"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="113dp"
+        android:layout_height="56dp"
+        android:text="567"
+        android:textColor="@color/not_serious_pink"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/questionText" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="381dp"
+        android:layout_height="92dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="
+        Σε πόσο καιρό πιστεύετε πως θα ολοκληρωθεί η εργασία;"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/button_selector"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/answer2"
+        app:layout_constraintTop_toBottomOf="@+id/timeView" />
+
+    <Button
+        android:id="@+id/answer1"
+        android:layout_width="184dp"
+        android:layout_height="99dp"
+        android:text="
+1 μήνα"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        android:background="@drawable/optionbutton"
+        app:layout_constraintRight_toLeftOf="@+id/answer2"
+        app:layout_constraintBottom_toTopOf="@+id/answer3" />
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="225dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="120"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/questionText"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

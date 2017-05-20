@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.teoflev.quom.arcadeActivity"
+    android:background="@color/greyback"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/answer3"
+        android:layout_width="180dp"
+        android:layout_height="94dp"
+        android:background="@drawable/optionbutton"
+        android:text="
+ Αφού δούμε μαζί μια αλβανική τσόντα"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer1"
+        app:layout_constraintRight_toLeftOf="@+id/answer4" />
+
+    <Button
+        android:id="@+id/answer2"
+        android:layout_width="180dp"
+        android:layout_height="94dp"
+        android:background="@drawable/optionbutton"
+        android:text="
+ΠΟΤΕ"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        app:layout_constraintLeft_toRightOf="@+id/answer1"
+        app:layout_constraintBottom_toTopOf="@+id/answer4" />
+
+    <Button
+        android:id="@+id/answer4"
+        android:layout_width="180dp"
+        android:layout_height="94dp"
+        android:background="@drawable/optionbutton"
+        android:text="
+ 2 μήνες"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/answer3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer2" />
+
+    <ImageView
+        android:id="@+id/heart3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/questionText"
+        app:layout_constraintLeft_toRightOf="@+id/heart1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/heart"
+        android:layout_marginStart="16dp" />
+
+    <ImageView
+        android:id="@+id/heart2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="93dp"
+        app:layout_constraintBottom_toTopOf="@+id/questionText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/heart3"
+        app:layout_constraintRight_toLeftOf="@+id/scoreView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/heart"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="93dp" />
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="113dp"
+        android:layout_height="56dp"
+        android:text="567"
+        android:textColor="@color/not_serious_pink"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/questionText"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginStart="8dp" />
+
+
+
+    <ImageView
+        android:id="@+id/heart1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/heart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/questionText"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="366dp"
+        android:layout_height="89dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/button_selector"
+        android:text="
+        Σε πόσο καιρό πιστεύετε πως θα ολοκληρωθεί η εργασία;"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintBottom_toTopOf="@+id/answer2"
+        app:layout_constraintTop_toBottomOf="@+id/scoreView" />
+
+    <Button
+        android:id="@+id/answer1"
+        android:layout_width="180dp"
+        android:layout_height="94dp"
+        android:background="@drawable/optionbutton"
+        android:text="
+1 μήνα"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        app:layout_constraintRight_toLeftOf="@+id/answer2"
+        app:layout_constraintBottom_toTopOf="@+id/answer3" />
+</android.support.constraint.ConstraintLayout>
