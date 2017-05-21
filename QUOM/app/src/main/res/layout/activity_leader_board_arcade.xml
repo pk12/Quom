@@ -27,7 +27,7 @@
 
     <ListView
         android:id="@+id/Scores"
-        android:layout_width="391dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"

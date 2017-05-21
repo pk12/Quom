@@ -3,7 +3,7 @@
     android:id="@+id/list_textView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="txt"
-    android:textAppearance="@style/TextAppearance.AppCompat.Medium">
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+    android:textSize="24dp">
 
 </TextView>

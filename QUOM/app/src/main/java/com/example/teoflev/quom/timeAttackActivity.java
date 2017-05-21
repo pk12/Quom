@@ -6,9 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.teoflev.quom.Quom.Normal;
 import com.example.teoflev.quom.Quom.Question;
 import com.example.teoflev.quom.Quom.TimeAttack;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +42,7 @@ public class timeAttackActivity extends AppCompatActivity {
         final Button ans4 = (Button) findViewById(R.id.answer4);
 
         //creating mode
-        final TimeAttack mode = new TimeAttack(c,getApplicationContext(),time);
+        final TimeAttack mode = new TimeAttack(c,getApplicationContext(),time,this);
         final ArrayList<Question> questions = mode.getQuestions();
 
 
@@ -83,6 +88,8 @@ public class timeAttackActivity extends AppCompatActivity {
 
 
 
+
+
     }
 
     public void ChangeQuestion(int index,TimeAttack mode){
@@ -96,6 +103,7 @@ public class timeAttackActivity extends AppCompatActivity {
         Question q = mode.getQuestions().get(index);
         List<String> possible= q.getPossible();
 
+
         questionT.setText(q.getQuestion());
         ans1.setText(possible.get(0));
         ans2.setText(possible.get(1));
@@ -106,6 +114,29 @@ public class timeAttackActivity extends AppCompatActivity {
 
 
         possible.clear();
+
+    }
+
+
+
+
+    public void Savefile(String str,Normal mode){
+
+        File f = new File(this.getApplicationContext().getFilesDir(),"TimeLead.txt");
+
+
+        try {
+            FileWriter fw = new FileWriter(f,true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.write(str + " Scored: " + mode.getScore());
+            bw.newLine();
+            bw.close();
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
