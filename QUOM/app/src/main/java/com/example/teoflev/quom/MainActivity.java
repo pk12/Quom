@@ -1,12 +1,9 @@
 package com.example.teoflev.quom;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +33,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toLeaderboards(View view){
+
         Intent intent = new Intent(MainActivity.this, LeaderBoard.class);
+
+        if (view.getId() == R.id.leaderArcade) {
+            intent.putExtra("filename","ArcadeLead.txt");
+        }
+        else {
+            intent.putExtra("filename","TimeLead.txt");
+        }
+
+
+
         startActivity(intent);
 
 

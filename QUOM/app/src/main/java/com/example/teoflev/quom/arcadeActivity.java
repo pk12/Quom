@@ -1,15 +1,22 @@
 package com.example.teoflev.quom;
 
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.teoflev.quom.Quom.Normal;
 import com.example.teoflev.quom.Quom.Question;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -110,6 +117,9 @@ public class arcadeActivity extends AppCompatActivity {
         ans4.setText(possible.get(3));
         scoreV.setText(String.valueOf(mode.getScore()));
 
+        //checks if game completed
+        gameCheck(mode.getQuestions(),index,mode);
+
         if (mode.getLives() == 0){
             hear1.setVisibility(View.INVISIBLE);
         }
@@ -124,10 +134,52 @@ public class arcadeActivity extends AppCompatActivity {
 
     }
 
+    public void gameCheck(ArrayList<Question> questions, int index, final Normal mode){
+        if (index == questions.size() || mode.getLives() == 0){
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
+            View v = getLayoutInflater().inflate(R.layout.enter_name_dialog, null);
+            final EditText Name = (EditText) v.findViewById(R.id.enter_name);
+            Button save = (Button) v.findViewById(R.id.save_button);
 
+            save.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (Name.getText().toString().isEmpty()){
+                        Toast.makeText(arcadeActivity.this,"Please Enter Your Name",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Savefile(Name.getText().toString(),mode);
+                        Toast.makeText(arcadeActivity.this,"Score Saved Succesfully",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+            mBuilder.setView(v);
+            AlertDialog dialog = mBuilder.create();
+            dialog.show();
+
+        }
+    }
+
+    public void Savefile(String str,Normal mode){
+
+        File f = new File(this.getApplicationContext().getFilesDir(),"ArcadeLead.txt");
+
+
+        try {
+            FileWriter fw = new FileWriter(f,true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.write(str + " Scored: " + mode.getScore());
+            bw.newLine();
+            bw.close();
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+    }
 
 
     }
+}
 
 
 
