@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.teoflev.quom.Quom.MyComparator;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -51,10 +53,19 @@ public class LeaderBoard extends AppCompatActivity {
                 tmp = br.readLine();
             }
 
-            ArrayAdapter<String> model = new ArrayAdapter<String>(this,R.layout.text_view,arrayList);
-            l.setAdapter(model);
             br.close();
             fr.close();
+
+            //sort scores
+            //noinspection Since15
+            arrayList.sort(new MyComparator());
+
+            ArrayAdapter<String> model = new ArrayAdapter<String>(this,R.layout.text_view,arrayList);
+            l.setAdapter(model);
+
+
+
+
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
