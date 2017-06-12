@@ -5,6 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+//Εργασια Τεχνολογιας Λογισμικου
+/* Δεν καταφεραμε να συμπεριλαβουμε το Night Mode λογω προβληματων χρησης σε αλλον υπολογιστη
+    Δεν προλαβαμε να συμπεριλαβουμε τα Minigames
+  */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
