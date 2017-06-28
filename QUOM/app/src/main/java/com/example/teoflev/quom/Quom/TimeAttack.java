@@ -30,7 +30,7 @@ public class TimeAttack extends Mode {
         this.time = time;
         this.activity = activity;
         this.context = context;
-        timer = (Timer) new Timer(120000,1000,time, context,activity,this).start();
+        timer = (Timer) new Timer(30000,1000,time, context,activity,this).start();
     }
 
     public void check(Question q) {
